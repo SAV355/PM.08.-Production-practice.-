@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>NEW TECHNOLOGY & BUILD — Demo</title>
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/shop.css">
+</head>
+
+<body>
+    <header class="site">
+        <div class="container header-row">
+            <a href="/" class="logo-link" aria-label="Главная">
+                <img src="/frontend/img/logo.svg" alt="NEW TECHNOLOGY & BUILD" class="logo-img" width="180" height="40">
+            </a>
+            
+            <nav class="main-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="/frontend/index.html">Home</a></li>
+                    <li><a href="/frontend/pages/about.html">About</a></li>
+                    <li><a href="/frontend/pages/shop.html" aria-current="page">Shop</a></li>
+                    <li><a href="/frontend/pages/blog.html">Blog</a></li>
+                    <li><a href="/frontend/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="act-btn" href="/frontend/pages/account.html">Login</a>
+                <a class="act-btn" href="/frontend/pages/auth.html">Register</a>
+                <a class="act-btn cart" href="/frontend/pages/checkout.html">Cart 
+                    <span class="badge" id="cart-count">2</span>
+                </a>
+<!-- Иконка личного кабинета -->
+                <a href="/frontend/pages/account.html" class="account-icon" id="account-icon" title="Личный кабинет" aria-label="Личный кабинет">
+<!-- изображение-плейсхолдер; заменится JS при наличии avatar/имени -->
+                    <span class="account-fallback" aria-hidden="true">U</span>
+                </a>
+            </div>
+        </div>
+    </header
+    <div class="container">
+    <header style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;margin:0 50px">
+        <h1 style="margin:0">Shop — Каталог</h1>
+        <div class="small">Free Home Delivery over \$100</div> <!-- из контента -->
+    </header>
+
+    <main>
+        <div class="layout" role="main">
+            <!-- Sidebar -->
+            <aside class="sidebar" aria-label="Фильтры">
+                <div class="filters">
+                    <h3>Фильтры</h3>
+
+                    <div class="filter-group">
+                        <label for="search">Поиск</label>
+                        <input id="search" type="search" placeholder="По названию"
+                            style="width:100%;padding:8px;border-radius:6px;border:1px solid #ddd">
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 style="margin:0 0 8px">Категория</h4>
+                        <label><input type="checkbox" value="wheels"> Wheels &amp; Tires</label>
+                        <label><input type="checkbox" value="brake"> Clutch &amp; Brake</label>
+                        <label><input type="checkbox" value="accessory"> Accessories</label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 style="margin:0 0 8px">Цена</h4>
+                        <label>От <input id="price-min" type="number" placeholder="0"
+                                style="width:100px;padding:6px"></label>
+                        <label>До <input id="price-max" type="number" placeholder="1000"
+                                style="width:100px;padding:6px"></label>
+                    </div>
+
+                    <div class="filter-group">
+                        <h4 style="margin:0 0 8px">Скидки</h4>
+                        <label><input type="checkbox" id="sale25" value="25"> 25% Off</label>
+                        <label><input type="checkbox" id="sale35" value="35"> 35% Off</label>
+                    </div>
+
+                    <div style="margin-top:12px">
+                        <button id="apply-filters" class="btn" style="width:100%">Применить</button>
+                    </div>
+                </div>
+            </aside>
+
+<!-- Content -->
+            <main class="content">
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                    <div class="small">Показаны популярные товары</div>
+                    <div class="small">Сортировать:
+                        <select id="sort">
+                            <option value="popular">Популярные</option>
+                            <option value="price-asc">Цена ↑</option>
+                            <option value="price-desc">Цена ↓</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Products -->
+                <section aria-label="Список товаров" id="products">
+                    <div class="products-grid" id="grid">
+                        <!-- Продукты (авто заполнение скриптом) -->
+                    </div>
+                </section>
+            </main>
+        </div>
+
+    </main>
+<!-- footer -->
+        <footer class="site footer">
+        <div class="footer-grid container">
+            <div class="footer col-a">
+                <h4>О магазине</h4>
+                <p>Мы предлагаем качественные автозапчасти и аксессуары. Бесплатная доставка при заказе от \$100.
+                    Круглосуточная онлайн‑поддержка.</p>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email-footer" type="email" placeholder="Ваш email" aria-label="Email для подписки" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer col-b">
+                <h4>Информация</h4>
+                <a href="/frontend/pages/blog.html">About Us</a>
+                <a href="/frontend/pages/contact.html">Contact</a>
+                <a href="#">Store Locations</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+    
+            <div class="footer col-c">
+                <h4>Быстрые ссылки</h4>
+                <a href="/pages/shop.html">Shop</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Flash Deals</a>
+                <a href="#">New Arrivals</a>
+            </div>
+    
+            <div class="footer col-d">
+                <h4>Поддержка</h4>
+                <a href="/frontend/pages/FAQ.html">FAQ</a>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Customer Support</a>
+            </div>
+        </div>
+    
+    </footer>
+
+    <script src="/frontend/js/icon-PA.js" defer></script>
+    <script src="/frontend/js/shop.js"></script>
+    <script src="/frontend/js/auto-complet.js"></script>
+</body>
+
+</html>

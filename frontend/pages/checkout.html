@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Оформление заказа — NEW TECHNOLOGY & BUILD</title>
+    <link rel="stylesheet" href="/frontend/css/checkout.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+</head>
+
+<body>
+    <header class="site">
+        <div class="container header-row">
+            <a href="index.html" class="logo-link" aria-label="Главная">
+                <img src="/frontend/img/logo.svg" alt="NEW TECHNOLOGY & BUILD" class="logo-img" width="180" height="40">
+            </a>
+            
+            <nav class="main-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="/frontend/index.html">Home</a></li>
+                    <li><a href="/frontend/pages/about.html">About</a></li>
+                    <li><a href="/frontend/pages/shop.html">Shop</a></li>
+                    <li><a href="/frontend/pages/blog.html">Blog</a></li>
+                    <li><a href="/frontend/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="act-btn" href="/frontend/pages/account.html">Login</a>
+                <a class="act-btn" href="/frontend/pages/auth.html">Register</a>
+                <a class="act-btn cart" href="/frontend/pages/checkout.html">Cart 
+                    <span class="badge" id="cart-count">2</span>
+                </a>
+<!-- Иконка личного кабинета -->
+                <a href="/frontend/pages/account.html" class="account-icon" id="account-icon" title="Личный кабинет" aria-label="Личный кабинет">
+<!-- изображение-плейсхолдер -->
+                    <span class="account-fallback" aria-hidden="true">U</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="checkout-container">
+        <h1>Оформление заказа</h1>
+        <p style="color:#666">Проверьте товары, укажите количество и нажмите «Оформить заказ». Бесплатная доставка
+            применяется для заказов свыше $100 (если нужно — можно добавить логику).</p>
+
+        <div class="cart-grid">
+            <section>
+                <div class="cart-list" id="cart-list">
+<!-- Карточки товаров будут вставлены JS -->
+                </div>
+            </section>
+
+            <aside>
+                <div class="summary" aria-live="polite">
+                    <h3>Сводка заказа</h3>
+                    <div class="summary-row">
+                        <span>Товары</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Доставка</span>
+                        <span id="shipping">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Скидка</span>
+                        <span id="discount">- $0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Итого</span>
+                        <span id="total">$0.00</span>
+                    </div>
+
+                    <div class="checkout-actions">
+                        <button class="cta" id="checkout-btn">Оформить заказ</button>
+                        <button class="btn" id="clear-cart">Очистить</button>
+                    </div>
+                    <p style="font-size:13px;color:#666;margin-top:10px">Поддержка онлайн доступна в рабочие часы.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+<!-- footer -->
+    <footer class="site footer">
+        <div class="footer-grid container">
+            <div class="footer col-a">
+                <h4>О магазине</h4>
+                <p>Мы предлагаем качественные автозапчасти и аксессуары. Бесплатная доставка при заказе от \$100.
+                    Круглосуточная онлайн‑поддержка.</p>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email-footer" type="email" placeholder="Ваш email" aria-label="Email для подписки" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer col-b">
+                <h4>Информация</h4>
+                <a href="/frontend/pages/blog.html">About Us</a>
+                <a href="/frontend/pages/contact.html">Contact</a>
+                <a href="#">Store Locations</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+    
+            <div class="footer col-c">
+                <h4>Быстрые ссылки</h4>
+                <a href="/pages/shop.html">Shop</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Flash Deals</a>
+                <a href="#">New Arrivals</a>
+            </div>
+    
+            <div class="footer col-d">
+                <h4>Поддержка</h4>
+                <a href="/frontend/pages/FAQ.html">FAQ</a>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Customer Support</a>
+            </div>
+        </div>
+    
+    </footer>
+
+    <script src="/frontend/js/icon-PA.js"></script>
+    <script src="/frontend/js/checkout.js"></script>
+</body>
+
+</html>

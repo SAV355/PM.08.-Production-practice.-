@@ -1,0 +1,33 @@
+
+.account-wrapper {
+    max-width: 1000px;
+    margin: 36px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 20px
+}
+.panel {
+    background: #fff;
+    padding: 18px;
+    border-radius: 10px
+}
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee
+}
+.orders .order {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 10px
+}
+.logout {
+    background: crimson;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none
+}

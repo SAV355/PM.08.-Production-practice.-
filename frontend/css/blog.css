@@ -1,0 +1,40 @@
+.blog-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px
+}
+.post {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .05)
+}
+.post h2 {
+    margin: 0 0 8px
+}
+.meta {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 12px
+}
+.excerpt {
+    line-height: 1.6;
+    color: #333
+}
+.read-more {
+    display: inline-block;
+    margin-top: 12px;
+    background: #e23b3b;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none
+}
+.subscribe {
+    background: #f5f7fa;
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 22px
+}

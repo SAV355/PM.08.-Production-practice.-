@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>FAQ — Вопросы и ответы — NEW TECHNOLOGY & BUILD</title>
+    <link rel="stylesheet" href="/frontend/css/faq.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+</head>
+
+<body>
+    <header class="site">
+        <div class="container header-row">
+            <a href="index.html" class="logo-link" aria-label="Главная">
+                <img src="/frontend/img/logo.svg" alt="NEW TECHNOLOGY & BUILD" class="logo-img" width="180" height="40">
+            </a>
+            <nav class="main-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="/frontend/index.html">Home</a></li>
+                    <li><a href="/frontend/pages/about.html">About</a></li>
+                    <li><a href="/frontend/pages/shop.html">Shop</a></li>
+                    <li><a href="/frontend/pages/blog.html">Blog</a></li>
+                    <li><a href="/frontend/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="act-btn" href="/frontend/pages/account.html">Login</a>
+                <a class="act-btn" href="/frontend/pages/auth.html">Register</a>
+                <a class="act-btn cart" href="/frontend/pages/checkout.html">Cart 
+                    <span class="badge" id="cart-count">2</span>
+                </a>
+<!-- Иконка личного кабинета -->
+                <a href="/frontend/pages/account.html" class="account-icon" id="account-icon" title="Личный кабинет" aria-label="Личный кабинет">
+<!-- изображение-плейсхолдер -->
+                    <span class="account-fallback" aria-hidden="true">U</span>
+                </a>
+            </div>
+    </header>
+    <main class="faq-container" id="main">
+        <h1>Часто задаваемые вопросы (FAQ)</h1>
+        <p class="muted">Здесь вы найдёте ответы по заказам, доставке, возвратам, оплате и работе сайта. Если не нашли ответ — свяжитесь с нашей службой поддержки.</p>
+        
+        <div class="faq-grid" role="region" aria-label="FAQ">
+            <!-- Sidebar -->
+            <aside class="faq-sidebar" aria-labelledby="faq-sidebar-title">
+                <h3 id="faq-sidebar-title">Поиск и категории</h3>
+
+                <div class="search" role="search" aria-label="Поиск по FAQ">
+                    <input id="faq-search" type="search" placeholder="Поиск по вопросам" aria-label="Поиск по вопросам">
+                    <button id="clear-search" class="btn" title="Очистить">Очистить</button>
+                </div>
+
+                <div>
+                    <h4>Категории</h4>
+                    <div class="category">
+                        <label>
+                            <input type="checkbox" name="cat" value="orders" checked>Заказы</label>
+                    </div>
+                    <div class="category">
+                        <label><input type="checkbox" name="cat" value="delivery" checked>Доставка</label>
+                    </div>
+                    <div class="category">
+                        <label><input type="checkbox" name="cat" value="payment" checked>Оплата</label>
+                    </div>
+                    <div class="category">
+                        <label><input type="checkbox" name="cat" value="returns" checked>Возврат</label>
+                    </div>
+                    <div class="category">
+                        <label><input type="checkbox" name="cat" value="account" checked>Аккаунт</label>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px">
+                    <h4>Популярные темы</h4>
+                    <div class="chip">Free Home Delivery</div>
+                    <div class="chip">Flash Deals</div>
+                    <div class="chip">Online Support</div>
+                </div>
+
+                <div style="margin-top:12px">
+                    <h4>Нужна помощь?</h4>
+                    <p class="muted">Если не нашли ответ, отправьте сообщение или позвоните нам.</p>
+                    <a class="cta-contact" href="contact.html">Контакты и карта</a>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <section class="faq-content" aria-labelledby="faq-title">
+                <h2 id="faq-title">Вопросы и ответы</h2>
+                <div class="muted" id="faq-count">Загружено вопросов: 0</div>
+
+                <div class="accordion" id="faq-accordion" role="list">
+                    <!-- Аккордеон наполняется скриптом -->
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+<!-- footer -->
+    <footer class="site footer">
+        <div class="footer-grid container">
+            <div class="footer col-a">
+                <h4>О магазине</h4>
+                <p>Мы предлагаем качественные автозапчасти и аксессуары. Бесплатная доставка при заказе от \$100.
+                    Круглосуточная онлайн‑поддержка.</p>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email-footer" type="email" placeholder="Ваш email" aria-label="Email для подписки" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer col-b">
+                <h4>Информация</h4>
+                <a href="/frontend/pages/blog.html">About Us</a>
+                <a href="/frontend/pages/contact.html">Contact</a>
+                <a href="/frontend/pages/contact.html">Store Locations</a>
+                <a href="/frontend/pages/contact.html">Terms &amp; Conditions</a>
+            </div>
+    
+            <div class="footer col-c">
+                <h4>Быстрые ссылки</h4>
+                <a href="/pages/shop.html">Shop</a>
+                <a href="/pages/shop.html">Best Seller</a>
+                <a href="/pages/shop.html">Flash Deals</a>
+                <a href="/pages/shop.html">New Arrivals</a>
+            </div>
+    
+            <div class="footer col-d">
+                <h4>Поддержка</h4>
+                <a href="/frontend/pages/FAQ.html">FAQ</a>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Customer Support</a>
+            </div>
+        </div>
+    
+    </footer>
+    
+    <script src="/frontend/js/icon-PA.js" defer></script>
+    <script src="/frontend/js/faq.js"></script>
+</body>
+
+</html>

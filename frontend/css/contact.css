@@ -1,0 +1,133 @@
+
+.contacts {
+    padding: 80px 0;
+    background-color: #16213e; 
+    color: #ffffff; 
+}
+
+.contacts .section-title {
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.contacts__content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+/* Левая колонка с информацией */
+.icon-location {
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/img/icon/icon_location_32.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-phone {
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/img/icon/icon_Phone_32.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-mail {
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/img/icon/icon_mail_32.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contacts__info-block {
+    flex: 1; 
+    min-width: 300px; 
+    max-width: 500px;
+}
+
+.contacts__info-block h3 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+}
+
+.contacts__info-block p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.contacts__links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contacts__links a,
+.contacts__address {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s ease;
+}
+
+.contacts__links a:hover {
+    color: var(--primary-color-light);
+}
+
+.contacts__social {
+    display: flex;
+    gap: 15px;
+}
+
+.contacts__social img {
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.contacts__social a:hover img {
+    transform: scale(1.1);
+}
+
+/* Правая колонка с картой */
+.contacts__map {
+    flex: 1.2; 
+    min-width: 300px;
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+@media (max-width: 991.98px) {
+    .contacts__content {
+        flex-direction: column; 
+        align-items: stretch; 
+    }
+
+    .contacts__info-block {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .contacts__links, .contacts__address {
+        justify-content: center;
+    }
+
+    .contacts__social {
+        justify-content: center;
+    }
+}
+

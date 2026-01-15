@@ -1,0 +1,53 @@
+
+.auth-wrapper {
+    max-width: 920px;
+    margin: 36px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px
+}
+.panel {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px
+}
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px
+}
+.tab {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: #f7f7f7
+}
+.tab.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent)
+}
+form {
+    display: grid;
+    gap: 10px
+}
+input,
+button,
+select,
+textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc
+}
+.small {
+    font-size: 13px;
+    color: var(--muted)
+}
+.divider {
+    height: 1px;
+    background: #eee;
+    margin: 12px 0
+}
+

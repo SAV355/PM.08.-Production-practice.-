@@ -1,0 +1,83 @@
+/* Небольшой локальный стиль для страницы оформления */
+.checkout-container {
+    max-width: 1000px;
+    margin: 28px auto;
+    padding: 20px
+}
+.cart-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px
+}
+.cart-item {
+    display: flex;
+    gap: 12px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 10px;
+    align-items: center
+}
+.thumb {
+    width: 120px;
+    height: 80px;
+    background: #f0f0f0;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999
+}
+.item-info {
+    flex: 1
+}
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-end
+}
+.qty {
+    display: flex;
+    gap: 6px;
+    align-items: center
+}
+.qty button {
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #fff
+}
+.remove {
+    background: transparent;
+    border: 0;
+    color: crimson;
+    cursor: pointer
+}
+.summary {
+    background: #fff;
+    padding: 16px;
+    border-radius: 10px;
+    margin-top: 12px
+}
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee
+}
+.summary-row.total {
+    font-weight: 700;
+    border-bottom: none
+}
+.checkout-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px
+}
+@media(min-width:900px) {
+    .cart-grid {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 18px
+    }
+}

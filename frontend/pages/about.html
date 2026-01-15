@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>О компании — NEW TECHNOLOGY & BUILD</title>
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+</head>
+
+<body>
+    <header class="site">
+        <div class="container header-row">
+            <a href="index.html" class="logo-link" aria-label="Главная">
+                <img src="/frontend/img/logo.svg" alt="NEW TECHNOLOGY & BUILD" class="logo-img" width="180" height="40">
+            </a>
+            
+            <nav class="main-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="/frontend/index.html">Home</a></li>
+                    <li><a href="/frontend/pages/about.html" aria-current="page">About</a></li>
+                    <li><a href="/frontend/pages/shop.html">Shop</a></li>
+                    <li><a href="/frontend/pages/blog.html">Blog</a></li>
+                    <li><a href="/frontend/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="act-btn" href="/frontend/pages/account.html">Login</a>
+                <a class="act-btn" href="/frontend/pages/auth.html">Register</a>
+                <a class="act-btn cart" href="/frontend/pages/checkout.html">Cart 
+                    <span class="badge" id="cart-count">2</span>
+                </a>
+<!-- Иконка личного кабинета -->
+                <a href="/frontend/pages/account.html" class="account-icon" id="account-icon" title="Личный кабинет" aria-label="Личный кабинет">
+<!-- изображение-плейсхолдер -->
+                    <span class="account-fallback" aria-hidden="true">U</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container" style="padding:32px 20px;">
+            <h1>О компании</h1>
+
+            <section style="margin-top:16px;max-width:900px;line-height:1.6;">
+                <p>
+                    NEW TECHNOLOGY &amp; BUILD — специализированный магазин автозапчастей и автомобильных аксессуаров,
+                    предлагающий
+                    широкий ассортимент продуктов для обслуживания и апгрейда автомобиля.
+                </p>
+
+                <p>
+                    Мы ориентированы на качество: все товары тщательно отбираются, чтобы обеспечить длительную и
+                    надёжную работу
+                    для наших клиентов.
+                </p>
+
+                <p>
+                    Для удобства покупателей доступна бесплатная доставка при заказах свыше \$100, что помогает снизить
+                    общие затраты
+                    и ускорить получение необходимых запчастей.
+                </p>
+
+                <p>
+                    Наша служба онлайн‑поддержки работает для того, чтобы быстро отвечать на вопросы, помогать с
+                    подбором деталей и
+                    сопровождать покупку до её завершения.
+                </p>
+
+                <h2 style="margin-top:18px">Ассортимент и предложения</h2>
+                <p>
+                    В каталоге представлены как хиты продаж, так и специализированные позиции: от сцеплений и тормозных
+                    механизмов
+                    до рульных систем и камер наблюдения — с регулярными акциями и flash‑предложениями.
+                </p>
+
+                <h2 style="margin-top:18px">Почему выбирают нас</h2>
+                <ul>
+                    <li>Качество продукции и проверенные поставщики.</li>
+                    <li>Бесплатная доставка от определённой суммы заказа.</li>
+                    <li>Онлайн‑поддержка для оперативного решения вопросов и помощи в подборе.</li>
+                    <li>Регулярные скидки и flash‑deals для экономии покупателя.</li>
+                    <li>Прозрачные цены и подробные карточки товаров — стандарт хорошего пользовательского опыта.</li>
+                </ul>
+
+                <h2 style="margin-top:18px">Контакты и взаимодействие</h2>
+                <p>
+                    Чтобы связаться с нами, посетите страницу контактов — там указаны адрес, телефон, факс и электронная
+                    почта, а также
+                    карта с расположением офиса.
+                </p>
+
+                <p style="margin-top:18px">
+                    Если хотите — мы можем подготовить расширённую страницу «О компании» с историей, миссией, командой,
+                    сертификациями и отзывами клиентов внизу страницы.
+                </p>
+            </section>
+        </div>
+
+    </main>
+
+<!-- footer -->
+    <footer class="site footer">
+        <div class="footer-grid container">
+            <div class="footer col-a">
+                <h4>О магазине</h4>
+                <p>Мы предлагаем качественные автозапчасти и аксессуары. Бесплатная доставка при заказе от \$100.
+                    Круглосуточная онлайн‑поддержка.</p>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email-footer" type="email" placeholder="Ваш email" aria-label="Email для подписки" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer col-b">
+                <h4>Информация</h4>
+                <a href="/frontend/pages/blog.html">About Us</a>
+                <a href="/frontend/pages/contact.html">Contact</a>
+                <a href="#">Store Locations</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+    
+            <div class="footer col-c">
+                <h4>Быстрые ссылки</h4>
+                <a href="/pages/shop.html">Shop</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Flash Deals</a>
+                <a href="#">New Arrivals</a>
+            </div>
+    
+            <div class="footer col-d">
+                <h4>Поддержка</h4>
+                <a href="/frontend/pages/FAQ.html">FAQ</a>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Customer Support</a>
+            </div>
+        </div>
+    
+    </footer>
+
+    <script src="/frontend/js/icon-PA.js" defer></script>
+    <script src="/frontend/js/script.js" defer></script>
+</body>
+
+</html>
+

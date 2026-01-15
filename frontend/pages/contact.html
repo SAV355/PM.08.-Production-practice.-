@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Контакты — NEW TECHNOLOGY & BUILD</title>
+    <link rel="stylesheet" href="/frontend/css/contact.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+</head>
+<body>
+    <header class="site">
+        <div class="container header-row">
+            <a href="/" class="logo-link" aria-label="Главная">
+                <img src="/frontend/img/logo.svg" alt="NEW TECHNOLOGY & BUILD" class="logo-img" width="180" height="40">
+            </a>
+            
+            <nav class="main-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="/frontend/index.html">Home</a></li>
+                    <li><a href="/frontend/pages/about.html">About</a></li>
+                    <li><a href="/frontend/pages/shop.html">Shop</a></li>
+                    <li><a href="/frontend/pages/blog.html">Blog</a></li>
+                    <li><a href="/frontend/pages/contact.html" aria-current="page">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="act-btn" href="/frontend/pages/account.html">Login</a>
+                <a class="act-btn" href="/frontend/pages/auth.html">Register</a>
+                <a class="act-btn cart" href="/frontend/pages/checkout.html">Cart 
+                    <span class="badge" id="cart-count">2</span>
+                </a>
+<!-- Иконка личного кабинета -->
+                <a href="/frontend/pages/account.html" class="account-icon" id="account-icon" title="Личный кабинет" aria-label="Личный кабинет">
+<!-- изображение-плейсхолдер -->
+                    <span class="account-fallback" aria-hidden="true">U</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="padding:32px 20px;">
+            <h1>Контакты</h1>
+            <section aria-labelledby="contact-desc" style="margin-top:16px;display:grid;grid-template-columns:1fr 380px;gap:24px;">
+                <div>
+                    <h2 id="contact-desc">Описание</h2>
+                    <p>
+                        Новейший магазин автозапчастей и аксессуаров. Мы предлагаем широкий ассортимент оригинальных и
+                        совместимых
+                        деталей, профессиональную поддержку и быструю доставку по Москве и регионам. Если у вас возникли
+                        вопросы по
+                        товарам, заказам или обслуживанию — свяжитесь с нами любым удобным способом.
+                    </p>
+    
+                    <h3 style="margin-top:18px">Общая информация</h3>
+                    <address style="font-style:normal;line-height:1.6;">
+                        <strong>Адрес:</strong><br>
+                        г. Москва, ул. Технологичная, д. 1, офис 101<br><br>
+    
+                        <strong>Телефон:</strong><br>
+                        <a href="tel:+74951234567">+7 (495) 123-45-67</a><br><br>
+    
+                        <strong>Факс:</strong><br>
+                        <a href="fax:+74951234568">+7 (495) 123-45-68</a><br><br>
+    
+                        <strong>E-mail:</strong><br>
+                        <a href="mailto:info@ntbuild.example">info@ntbuild.example</a>
+                    </address>
+    
+                    <p style="margin-top:18px">
+                        Режим работы: Пн–Пт 09:00–18:00, Сб 10:00–16:00, Вс — выходной.
+                    </p>
+    
+                    <h3 style="margin-top:20px">Связаться через форму</h3>
+                    <form id="contact-form" onsubmit="return false;"
+                        style="display:grid;gap:10px;max-width:640px;margin-top:8px;">
+                        <label class="sr-only" for="name">Имя</label>
+                        <input id="name" name="name" type="text" placeholder="Ваше имя" required
+                            style="padding:10px;border-radius:6px;border:1px solid #ccc;">
+                        <label class="sr-only" for="email-c">Email</label>
+                        <input id="email-c" name="email" type="email" placeholder="Ваш email" required
+                            style="padding:10px;border-radius:6px;border:1px solid #ccc;">
+                        <label class="sr-only" for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Сообщение" required
+                            style="padding:10px;border-radius:6px;border:1px solid #ccc;"></textarea>
+                        <div style="display:flex;gap:8px;">
+                            <button type="submit" class="cta" aria-label="Отправить сообщение">Отправить</button>
+                            <button type="reset" class="btn">Очистить</button>
+                        </div>
+                        <div id="contact-result" aria-live="polite" style="color:green"></div>
+                    </form>
+                </div>
+    
+                <aside aria-label="Карта и проезд" style="min-width:280px;">
+                    <h3>Карта — г. Москва, ул. Технологичная, д. 1</h3>
+
+                    <div
+                        style="width:100%;height:280px;border-radius:8px;overflow:hidden;border:1px solid #e6e6e6;margin-top:8px">
+                        <iframe title="Карта: г. Москва, ул. Технологичная, д.1" width="100%" height="100%" frameborder="0"
+                            style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=г.+Москва,+ул.+Технологичная,+1&output=embed">
+                        </iframe>
+                    </div>
+    
+                    <p style="font-size:13px;color:var(--muted);margin-top:8px">
+                        Для получения маршрута откройте карту в Google Maps и задайте пункт отправления.
+                    </p>
+                </aside>
+            </section>
+        </div>
+    
+    </main>
+<!-- footer -->
+    <footer class="site footer">
+        <div class="footer-grid container">
+            <div class="footer col-a">
+                <h4>О магазине</h4>
+                <p>Мы предлагаем качественные автозапчасти и аксессуары. Бесплатная доставка при заказе от \$100.
+                    Круглосуточная онлайн‑поддержка.</p>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email-footer" type="email" placeholder="Ваш email" aria-label="Email для подписки" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer col-b">
+                <h4>Информация</h4>
+                <a href="/frontend/pages/blog.html">About Us</a>
+                <a href="/frontend/pages/contact.html">Contact</a>
+                <a href="#">Store Locations</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+    
+            <div class="footer col-c">
+                <h4>Быстрые ссылки</h4>
+                <a href="/pages/shop.html">Shop</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Flash Deals</a>
+                <a href="#">New Arrivals</a>
+            </div>
+    
+            <div class="footer col-d">
+                <h4>Поддержка</h4>
+                <a href="/frontend/pages/FAQ.html">FAQ</a>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Customer Support</a>
+            </div>
+        </div>
+    
+    </footer>
+
+    <script src="/frontend/js/script.js" defer></script>
+    <script src="/frontend/js/contact-script.js"></script>
+    <script src="/frontend/js/icon-PA.js" defer></script>
+</body>
+    
+</html>

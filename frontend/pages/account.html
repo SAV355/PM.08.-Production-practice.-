@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Личный кабинет — NEW TECHNOLOGY & BUILD</title>
+    <link rel="stylesheet" href="/frontend/css/account.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+</head>
+
+<body>
+    <header class="site">
+        <div class="container header-row">
+            <a href="index.html" class="logo-link" aria-label="Главная">
+                <img src="/frontend/img/logo.svg" alt="NEW TECHNOLOGY & BUILD" class="logo-img" width="180" height="40">
+            </a>
+
+            <nav class="main-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="/frontend/index.html">Home</a></li>
+                    <li><a href="/frontend/pages/about.html">About</a></li>
+                    <li><a href="/frontend/pages/shop.html">Shop</a></li>
+                    <li><a href="/frontend/pages/blog.html">Blog</a></li>
+                    <li><a href="/frontend/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="act-btn" href="/frontend/pages/account.html">Login</a>
+                <a class="act-btn" href="/frontend/pages/auth.html">Register</a>
+                <a class="act-btn cart" href="/frontend/pages/checkout.html">Cart 
+                    <span class="badge" id="cart-count">2</span>
+                </a>
+<!-- Иконка личного кабинета -->
+                <a href="/frontend/pages/account.html" class="account-icon" id="account-icon" title="Личный кабинет" aria-label="Личный кабинет">
+<!-- изображение-плейсхолдер -->
+                    <span class="account-fallback" aria-hidden="true">U</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="account-wrapper container">
+            <section class="panel profile">
+                <h2>Профиль</h2>
+                <div id="not-auth" style="display:none;color:#b00">Вы не авторизованы. <a href="auth.html">Войти</a>
+                </div>
+<!-- update profile-info (наработка для редактирования  профиля, не прошла проверку, требуется доработать) -->
+                <!-- <form id="profile-form">
+                  <div style="display:grid;gap:8px">
+                    <label>Имя
+                      <input id="pf-name" name="name" type="text" required style="padding:8px;border-radius:6px;                border:1px solid #ddd">
+                    </label>
+                
+                    <label>Email
+                      <input id="pf-email" name="email" type="email" required style="padding:8px;border-radius:6px;             border:1px solid #ddd">
+                      <small id="pf-email-check" style="margin-left:6px;color:#666"></small>
+                    </label>
+                
+                    <label>Телефон
+                      <input id="pf-phone" name="phone" type="tel" style="padding:8px;border-radius:6px;border:1px solid                #ddd">
+                    </label>
+                
+                    <div style="margin-top:6px">
+                      <strong>Сменить пароль</strong>
+                      <input id="pf-current-password" name="currentPassword" type="password" placeholder="Текущий пароль"               style="margin-top:6px;padding:8px;border-radius:6px;border:1px solid #ddd">
+                      <input id="pf-new-password" name="newPassword" type="password" placeholder="Новый пароль (мин. 8)"                style="margin-top:6px;padding:8px;border-radius:6px;border:1px solid #ddd">
+                    </div>
+                
+                    <div style="display:flex;gap:8px;margin-top:8px">
+                      <button type="submit" class="cta">Сохранить</button>
+                      <button type="button" id="pf-cancel" class="btn">Отменить</button>
+                      <button type="button" id="logout" class="logout" style="margin-left:auto">Выйти</button>
+                    </div>
+                    <div id="pf-result" aria-live="polite" style="margin-top:8px"></div>
+                  </div>
+                </form> -->
+
+                <div id="profile-info" style="display:none">
+                    <div class="profile-field">
+                        <strong>Имя</strong><span id="p-name"></span>
+                    </div>
+                    <div class="profile-field">
+                        <strong>Email</strong><span id="p-email"></span>
+                    </div>
+                    <div class="profile-field">
+                        <strong>Телефон</strong><span id="p-phone"></span>
+                    </div>
+                    <div class="profile-field">
+                        <strong>Пароль</strong><span id="p-password"></span>
+                    </div>
+                    <div style="margin-top:12px">
+                        <button id="logout" class="logout">Выйти</button>
+                    </div>
+                </div>
+
+                <div style="margin-top:18px">
+                    <h3>Настройки</h3>
+                    <p class="small">Исправление профиля и смена пароля должны реализовываться на сервере с проверкой
+                        старого пароля и безопасным хешированием.</p>
+                </div>
+            </section>
+
+            <aside class="panel">
+                <h3>Заказы</h3>
+                <div id="orders" class="orders">
+<!--  примеры заказов -->
+                </div>
+                <div style="margin-top:12px">
+                    <h4>Поддержка</h4>
+                    <p class="small">Нужна помощь? Онлайн‑поддержка доступна в рабочие часы.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+<!-- footer -->
+    <footer class="site footer">
+        <div class="footer-grid container">
+            <div class="footer col-a">
+                <h4>О магазине</h4>
+                <p>Мы предлагаем качественные автозапчасти и аксессуары. Бесплатная доставка при заказе от \$100.
+                    Круглосуточная онлайн‑поддержка.</p>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email-footer" type="email" placeholder="Ваш email" aria-label="Email для подписки" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer col-b">
+                <h4>Информация</h4>
+                <a href="/frontend/pages/blog.html">About Us</a>
+                <a href="/frontend/pages/contact.html">Contact</a>
+                <a href="#">Store Locations</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+    
+            <div class="footer col-c">
+                <h4>Быстрые ссылки</h4>
+                <a href="/pages/shop.html">Shop</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Flash Deals</a>
+                <a href="#">New Arrivals</a>
+            </div>
+    
+            <div class="footer col-d">
+                <h4>Поддержка</h4>
+                <a href="/frontend/pages/FAQ.html">FAQ</a>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Customer Support</a>
+            </div>
+        </div>
+    
+    </footer>
+
+    <script src="/frontend/js/icon-PA.js" defer></script>
+    <script src="/frontend/js/Initialization-LC.js" defer></script>
+    <script src="/frontend/js/update-profile.js" defer></script>
+    <script src="/frontend/js/profile-form.js" defer></script>
+    <script src="/frontend/js/profile-actions.js" defer></script>
+
+</body>
+
+</html>

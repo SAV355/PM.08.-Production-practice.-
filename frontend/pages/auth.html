@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Вход / Регистрация — NEW TECHNOLOGY & BUILD</title>
+    <link rel="stylesheet" href="/frontend/css/auth.css">
+    <link rel="stylesheet" href="/frontend/css/styles.css">
+</head>
+
+<body>
+    <header class="site">
+        <div class="container header-row">
+            <a href="index.html" class="logo-link" aria-label="Главная">
+                <img src="/frontend/img/logo.svg" alt="NEW TECHNOLOGY & BUILD" class="logo-img" width="180" height="40">
+            </a>
+
+            <nav class="main-nav" aria-label="Главное меню">
+                <ul>
+                    <li><a href="/frontend/index.html">Home</a></li>
+                    <li><a href="/frontend/pages/about.html">About</a></li>
+                    <li><a href="/frontend/pages/shop.html">Shop</a></li>
+                    <li><a href="/frontend/pages/blog.html">Blog</a></li>
+                    <li><a href="/frontend/pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a class="act-btn" href="/frontend/pages/account.html">Login</a>
+                <a class="act-btn" href="/frontend/pages/auth.html">Register</a>
+                <a class="act-btn cart" href="/frontend/pages/checkout.html">Cart 
+                    <span class="badge" id="cart-count">2</span>
+                </a>
+<!-- Иконка личного кабинета -->
+                <a href="/frontend/pages/account.html" class="account-icon" id="account-icon" title="Личный кабинет" aria-label="Личный кабинет">
+<!-- изображение-плейсхолдер -->
+                    <span class="account-fallback" aria-hidden="true">U</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="auth-wrapper container">
+<!-- Left: Описание / преимущества -->
+            <aside class="panel">
+                <h2>Добро пожаловать</h2>
+                <p>Создайте аккаунт или войдите, чтобы управлять заказами, смотреть историю покупок и получать
+                    персональные предложения. Бесплатная доставка при заказе от $100 и онлайн‑поддержка помогают сделать
+                    покупку удобной.</p>
+                <div class="divider"></div>
+                <h3>Преимущества аккаунта</h3>
+                <ul>
+                    <li>История заказов и отслеживание</li>
+                    <li>Быстрое оформление и сохранённые адреса</li>
+                    <li>Участие в flash‑deals и скидках (25% и др.)</li>
+                    <li>Поддержка клиентов и рассылка специальных предложений</li>
+                </ul>
+            </aside>
+
+<!-- Right: вкладки Вход / Регистрация -->
+            <section class="panel" aria-labelledby="auth-title">
+                <div class="tabs" role="tablist">
+                    <button class="tab active" id="tab-signin" role="tab" aria-controls="signin">Вход</button>
+                    <button class="tab" id="tab-signup" role="tab" aria-controls="signup">Регистрация</button>
+                </div>
+
+<!-- Signin-Login(залогиниться) -->
+                <div id="signin" class="tab-panel" role="tabpanel">
+                    <h3 id="auth-title">Вход в аккаунт</h3>
+                    <form id="signin-form">
+                        <input type="email" id="signin-email" placeholder="Email" required>
+                        <input type="password" id="signin-password" placeholder="Пароль" required>
+                        <label class="small"><input type="checkbox" id="remember"> Запомнить меня</label>
+                        <div style="display:flex;gap:8px;">
+                            <button class="cta" type="submit">Войти</button>
+                            <button class="btn" type="button" id="to-signup">Регистрация</button>
+                        </div>
+                        <div id="signin-result" aria-live="polite" class="small"></div>
+                    </form>
+                    <div class="divider"></div>
+                    <p class="small">Забыли пароль? В демо ссылка не работает — добавьте обработку на сервере для
+                        восстановления.</p>
+                </div>
+
+<!-- Signup (регистрация) -->
+                <div id="signup" class="tab-panel" role="tabpanel" hidden>
+                    <h3>Создать аккаунт</h3>
+                    <form id="signup-form">
+                        <input type="text" id="signup-name" placeholder="Имя" required>
+                        <input type="email" id="signup-email" placeholder="Email" required>
+                        <input type="tel" id="signup-phone" placeholder="Телефон">
+                        <input type="password" id="signup-password" placeholder="Пароль (мин. 8 символов)" required>
+                        <input type="password" id="signup-password2" placeholder="Повторите пароль" required>
+                        <label class="small"><input type="checkbox" id="newsletter"> Подписаться на рассылку (flash
+                            deals, акции)</label>
+                        <div style="display:flex;gap:8px;">
+                            <button class="cta" type="submit">Зарегистрироваться</button>
+                            <button class="btn" type="button" id="to-signin">Уже есть аккаунт</button>
+                        </div>
+                        <div id="signup-result" aria-live="polite" class="small"></div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+<!-- footer -->
+    <footer class="site footer">
+        <div class="footer-grid container">
+            <div class="footer col-a">
+                <h4>О магазине</h4>
+                <p>Мы предлагаем качественные автозапчасти и аксессуары. Бесплатная доставка при заказе от \$100.
+                    Круглосуточная онлайн‑поддержка.</p>
+                <form class="newsletter" action="#" method="post" onsubmit="return false;">
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email-footer" type="email" placeholder="Ваш email" aria-label="Email для подписки" required>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div class="footer col-b">
+                <h4>Информация</h4>
+                <a href="/frontend/pages/blog.html">About Us</a>
+                <a href="/frontend/pages/contact.html">Contact</a>
+                <a href="#">Store Locations</a>
+                <a href="#">Terms &amp; Conditions</a>
+            </div>
+    
+            <div class="footer col-c">
+                <h4>Быстрые ссылки</h4>
+                <a href="/pages/shop.html">Shop</a>
+                <a href="#">Best Seller</a>
+                <a href="#">Flash Deals</a>
+                <a href="#">New Arrivals</a>
+            </div>
+    
+            <div class="footer col-d">
+                <h4>Поддержка</h4>
+                <a href="/frontend/pages/FAQ.html">FAQ</a>
+                <a href="#">Shipping &amp; Returns</a>
+                <a href="#">Payment Methods</a>
+                <a href="#">Customer Support</a>
+            </div>
+        </div>
+        
+    </footer>
+
+    <script src="/frontend/js/update-auth.js" defer></script>
+</body>
+
+</html>
